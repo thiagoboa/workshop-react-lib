@@ -2,10 +2,11 @@
   "name": "workshop-react-lib",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "styleguidist server"
+    "start": "styleguidist server",
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +20,15 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-styleguidist": "^10.2.1",
+    "rollup": "^1.27.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
     "webpack": "^4.41.2"
   },
   "dependencies": {
