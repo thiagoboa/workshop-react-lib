@@ -23,5 +23,9 @@
     "react-dom": "^16.8.6",
     "react-styleguidist": "^10.2.1",
     "webpack": "^4.41.2"
+  },
+  "dependencies": {
+    "styled-components": "^4.4.1",
+    "styled-theming": "^2.2.0"
   }
 }
