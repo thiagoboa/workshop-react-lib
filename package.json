@@ -1,11 +1,16 @@
 {
-  "name": "workshop-react-lib",
-  "version": "1.0.0",
-  "description": "",
+  "name": "tb-awesome-ui",
+  "version": "1.0.1",
+  "description": "An example of a simple React NPM library",
   "main": "dist/index.js",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "styleguidist server",
+    "prepublishOnly": "rm -rf dist && yarn build",
+    "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "build": "rollup -c"
   },
   "keywords": [],
