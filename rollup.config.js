@@ -21,7 +21,14 @@ export default [
       }),
       external(),
       resolve(),
-      commonjs()
+      commonjs({
+        namedExports: {
+          // left-hand side can be an absolute path, a path
+          // relative to the current directory, or the name
+          // of a module in node_modules
+          "react-is": ["isElement", "isValidElementType", "ForwardRef"]
+        }
+      })
     ]
   }
 ];
