@@ -1,11 +1,11 @@
 import React from "react";
-import styled, { css, ThemeProvider } from "styled-components";
+import styled, { css, withTheme } from "styled-components";
 import theme from "styled-theming";
 
 const white = "#fff";
 const black = "#000";
 
-const buttonStyles = theme("mode", {
+export const buttonStyles = theme("mode", {
   light: css`
     background: ${white};
     color: ${black};
@@ -22,11 +22,8 @@ const StyledButton = styled.button`
 `;
 
 function Button(props) {
-  return (
-    <ThemeProvider theme={{ mode: "dark" }}>
-      <StyledButton>{props.children}</StyledButton>
-    </ThemeProvider>
-  );
+  console.log("Lib theme:", props.theme);
+  return <StyledButton theme={props.theme}>{props.children}</StyledButton>;
 }
 
-export default Button;
+export default withTheme(Button);
